@@ -26,9 +26,9 @@ class GFNet(nn.Module):
         self.dp_rg3 = ResidualGroup(default_conv, 2*num_feats, kernel_size, reduction=16, n_resblocks=4)
         self.dp_rg4 = ResidualGroup(default_conv, 3*num_feats, kernel_size, reduction=16, n_resblocks=4)
 
-        self.bridge1 = SDM(channels=num_feats, rgb_channels=num_feats,scale=scale)
-        self.bridge2 = SDM(channels=2*num_feats, rgb_channels=num_feats,scale=scale)
-        self.bridge3 = SDM(channels=3*num_feats, rgb_channels=num_feats,scale=scale)
+        self.bridge1 = SFIB(channels=num_feats, rgb_channels=num_feats,scale=scale)
+        self.bridge2 = SFIB(channels=2*num_feats, rgb_channels=num_feats,scale=scale)
+        self.bridge3 = SFIB(channels=3*num_feats, rgb_channels=num_feats,scale=scale)
 
         self.c_de = default_conv(4*num_feats, 2*num_feats, 1)
 
@@ -60,7 +60,7 @@ class GFNet(nn.Module):
 
         self.act = nn.LeakyReLU(negative_slope=0.2, inplace=True)
 
-        self.gradNet = GCM(n_feats=num_feats,scale=scale)
+        self.gradNet = GFE(n_feats=num_feats,scale=scale)
 
 
 

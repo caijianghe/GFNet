@@ -6,7 +6,7 @@ plt.rcParams.update({'font.size': 12})
 # 数据
 x_labels = ['NYUv2', 'Middlebury', 'RGB-D-D']
 y_data = {
-    r'SFNet w/ $L_{spa}$': [2.58, 1.70, 1.67],
+    r'GFNet w/ $L_{spa}$': [2.58, 1.70, 1.67],
     r'w/ $L_{gra}$': [2.54, 1.67, 1.66],
     r'w/ $L_{fre}$': [2.51, 1.65, 1.65],
     'All': [2.48, 1.64, 1.64]

@@ -386,9 +386,9 @@ class get_Fre(nn.Module):
         return dp_amp, dp_pha
 
 
-class SDM(nn.Module):
+class SFIB(nn.Module):
     def __init__(self, channels, rgb_channels, scale):
-        super(SDM, self).__init__()
+        super(SFIB, self).__init__()
         self.rgbprocess = nn.Conv2d(rgb_channels, rgb_channels, 3, 1, 1)
         self.rgbpre = nn.Conv2d(rgb_channels, rgb_channels, 1, 1, 0)
         self.spa_process = nn.Sequential(InvBlock(DenseBlock, channels + rgb_channels, channels),
@@ -493,9 +493,9 @@ class Get_gradient_nopadding_d(nn.Module):
         return x
 
 
-class GCM(nn.Module):
+class GFE(nn.Module):
     def __init__(self, n_feats, scale):
-        super(GCM, self).__init__()
+        super(GFE, self).__init__()
         self.grad_rgb = Get_gradient_nopadding_rgb()
         self.grad_d = Get_gradient_nopadding_d()
         self.upBlock = DenseProjection(1, 1, scale, up=True, bottleneck=False)
