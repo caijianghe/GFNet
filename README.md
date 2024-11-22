@@ -10,11 +10,11 @@ tqdm==4.64.1
 ```
 
 ## Datasets
-[NYU-v2](https://drive.google.com/file/d/1osYRaDfMYuyiTkJwDbKl3kHwyevDLsZf/view?usp=sharing)
+[NYU v2](https://drive.google.com/file/d/1osYRaDfMYuyiTkJwDbKl3kHwyevDLsZf/view?usp=sharing)
 [RGB-D-D](https://github.com/lingzhi96/RGB-D-D-Dataset)
 [Middlebury](https://web.cecs.pdx.edu/~fliu/project/depth-enhance/)
 
-## Train on synthetic NYU-v2
+## Train on synthetic NYU v2
 > python train.py --scale 4 --num_feats 32
 > 
 > python train.py --scale 8 --num_feats 32
@@ -23,7 +23,7 @@ tqdm==4.64.1
 ## Train on real-world RGB-D-D
 > python train.py --scale 4 --num_feats 24
 
-## Test on synthetic datasets
+## Test on NYU v2, Middlebury, RGB-D-D datasets
 > python test.py --scale 4 --num_feats 32
 > 
 > python test.py --scale 8 --num_feats 32
