@@ -16,15 +16,20 @@ tqdm==4.64.1
 
 ## Train on synthetic NYU-v2
 > python train.py --scale 4 --num_feats 32
+> 
 > python train.py --scale 8 --num_feats 32
+> 
 > python train.py --scale 16 --num_feats 32
 ## Train on real-world RGB-D-D
 > python train.py --scale 4 --num_feats 24
 
 ## Test on synthetic datasets
 > python test.py --scale 4 --num_feats 32
+> 
 > python test.py --scale 8 --num_feats 32
+> 
 > python test.py --scale 16 --num_feats 32
+> 
 ## Test on real-world RGB-D-D
 > python test.py --scale 4 --num_feats 24
 
@@ -40,5 +45,5 @@ tqdm==4.64.1
 
 ### Visual comparison
 <p align="center">
-<img src="figures/img_1.png"/>
+<img src="figures/img_3.png"/>
 </p>
